@@ -1,0 +1,5 @@
+{
+  "java.project.sourcePaths": ["./"],
+  "java.project.outputPath": "bin",
+  "java.project.referencedLibraries": ["lib/*.jar", "lib/jBCrypt-0.4.1.jar"]
+}
