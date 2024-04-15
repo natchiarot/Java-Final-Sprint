@@ -1,10 +1,8 @@
 /**
  * The Doctor class represents a user who is a doctor - with a medical license and specialization.
- * It extends the User class and adds properties specific to doctors.
+ * It extends the User class.
  */
 public class Doctor extends User{
-    private String medicalLicenseNumber;
-    private String specialization;
 
     /**
      * Constructs a Doctor object with the specified attributes.
@@ -20,11 +18,9 @@ public class Doctor extends User{
      */
     public Doctor(int id, String firstName, String lastName, String email, String password, boolean isDoctor, String medicalLicenseNumber, String specialization) {
         super(id, firstName, lastName, email, password, isDoctor, medicalLicenseNumber, specialization);
-        this.medicalLicenseNumber = medicalLicenseNumber;
-        this.specialization = specialization;
     }
 
-    // Getters and setters for the new properties
+    // Getters and setters
     
     @Override
     public int getId() {
@@ -86,40 +82,24 @@ public class Doctor extends User{
        super.setDoctor(doctor);
    }
 
-   /**
-     * Retrieves the medical license number of the doctor.
-     *
-     * @return The medical license number.
-     */
+   @Override
    public String getMedicalLicenseNumber() {
-       return medicalLicenseNumber;
+       return super.getMedicalLicenseNumber();
    }
 
-   /**
-     * Sets the medical license number of the doctor.
-     *
-     * @param medicalLicenseNumber The medical license number to set.
-     */
+   @Override
    public void setMedicalLicenseNumber(String medicalLicenseNumber) {
-    this.medicalLicenseNumber = medicalLicenseNumber;
+       super.setMedicalLicenseNumber(medicalLicenseNumber);
+   }
+
+    @Override
+    public String getSpecialization() {
+        return super.getSpecialization();
     }
 
-    /**
-     * Retrieves the specialization of the doctor.
-     *
-     * @return The specialization.
-     */
-   public String getSpecialization() {
-       return specialization;
-   }
-
-   /**
-     * Sets the specialization of the doctor.
-     *
-     * @param specialization The specialization to set.
-     */
+   @Override
    public void setSpecialization(String specialization) {
-       this.specialization = specialization;
+       super.setSpecialization(specialization);
    }
 
    /**

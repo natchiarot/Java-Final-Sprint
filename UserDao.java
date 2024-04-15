@@ -50,8 +50,6 @@ public class UserDao {
      * @return The User object corresponding to the given ID, or null if not found.
      */
     public User getUserById(int id) { //get user by id from database 
-        // User user = null;
-
         int user_id = 0;
         String firstName = null;
         String lastName = null;

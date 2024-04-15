@@ -116,7 +116,6 @@ public class HealthDataDao {
                 height = rs.getDouble("height_inches");
                 steps = rs.getInt("steps");
                 heart_rate = rs.getInt("heart_rate");
-                // date = rs.getDate("date").toLocalDate();
                 if (rs.getDate("date") != null) {
                     date = rs.getDate("date").toLocalDate();
                 } else {
@@ -154,7 +153,6 @@ public class HealthDataDao {
           statement.setDouble(3, healthData.getHeight());
           statement.setInt(4,healthData.getSteps());
           statement.setInt(5, healthData.getHeartRate());
-            // statement.setDate(6, java.sql.Date.valueOf(healthData.getDate()));
             // Set a default date if healthData.getDate() is null
     LocalDate dateToInsert = healthData.getDate() != null ? healthData.getDate() : LocalDate.now();
     statement.setDate(6, java.sql.Date.valueOf(dateToInsert));
